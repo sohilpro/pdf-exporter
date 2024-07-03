@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="bg-white flex gap-3 flex-col break-inside-avoid" v-for="(row, index) in data" :key="index">
+        <div class="flex bg-[#00CCFF] text-white rounded-2xl w-full px-6 py-8">
+            <div class="flex justify-between w-full gap-2 text-xl">
+                <div class="flex gap-5 items-center"><img src="_____ARG_HOST_____/icons/logo-w.svg" alt="..." />
+                    <p class="text-xs font-bold">CRStrip.com</p>
+                </div>
+                <div class="flex gap-5 items-center"><span class="text-sm font-extrabold"> 07813331544 </span><img
+                        src="_____ARG_HOST_____/icons/call.svg" alt="..."></div>
+            </div>
+        </div>
+        <div class="grid border-b-2 pb-4 grid-cols-3">
+            <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> First name </span>
+                <p class="font-extrabold text-[#172B30] text-xs">{{row.name}}</p>
+            </div>
+            <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Last name </span>
+                <p class="font-extrabold text-[#172B30] text-xs">{{row.last_name}}</p>
+            </div>
+            <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> ID number/passport </span>
+                <p class="font-extrabold text-[#172B30] text-xs">{{row.number_passport}}</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-3">
+            <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> origin </span>
+                <p class="font-extrabold text-[#172B30] text-xs"> Tehran <span
+                        class="text-[#172B30]/70 font-normal">(mehrabad Airport)</span></p>
+            </div>
+            <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Destination </span>
+                <p class="font-extrabold text-[#172B30] text-xs"> Mashhad <span
+                        class="text-[#172B30]/70 font-normal">(hasheminejad Airport)</span></p>
+            </div>
+        </div>
+        <div class="bg-[#CCF5FF] px-6 py-8 rounded-md w-full">
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2.5"><span class="w-8 h-8 bg-[#D9D9D9] rounded-full"></span><span
+                        class="font-extrabold text-sm">Iran Air</span></div>
+                <div class="flex text-xs flex-col">
+                    <p class="font-extrabold text-[#172B30]"> Mashhad <span
+                            class="text-[#172B30]/70 font-normal">(hasheminejad Airport)</span></p><span
+                        class="text-[#172B30]/70 text-[10px]">09:18 PM 13 September</span>
+                </div><span class="text-[#172B30] text-xs"> Stop Time: 5h 34m. </span>
+            </div>
+        </div>
+        <div class="grid grid-cols-3">
+            <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Time </span>
+                <p class="font-extrabold text-[#172B30] text-xs">09:18 PM</p>
+            </div>
+            <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Date </span>
+                <p class="font-extrabold text-[#172B30] text-xs"> 13 September 2022 </p>
+            </div>
+            <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Ticket number </span>
+                <p class="font-extrabold text-[#172B30] text-xs">13256RA</p>
+            </div>
+            <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Cabin class </span>
+                <p class="font-extrabold text-[#172B30] text-xs">Economic</p>
+            </div>
+            <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Baggage </span>
+                <p class="font-extrabold text-[#172B30] text-xs">50 KG free</p>
+            </div>
+            <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Flight number </span>
+                <p class="font-extrabold text-[#172B30] text-xs">65232211456</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-10">
+            <div class="flex items-center gap-2.5"><span class="w-8 h-8 bg-[#D9D9D9] rounded-full"></span>
+                <div class="flex flex-col"><span class="text-[#172B30]/70 text-[10px]">Airline</span><span
+                        class="font-extrabold text-sm">Iran Air</span></div>
+            </div>
+            <div class="flex flex-col"><span class="text-[#172B30]/70 text-[10px]">Issue Time</span><span
+                    class="font-extrabold text-sm">07:15 PM , 9 September 2022</span></div>
+        </div>
+        <div class="grid border-b-2 pb-4 grid-cols-3">
+            <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Price </span>
+                <p class="font-extrabold text-[#172B30] text-xs"> 12.000.000.000 Rial </p>
+            </div>
+            <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Payment </span>
+                <p class="font-extrabold text-[#172B30] text-xs">Online Payment</p>
+            </div>
+            <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Issue Place </span>
+                <p class="font-extrabold text-[#172B30] text-xs">crstrip.com</p>
+            </div>
+        </div>
+        <div class="flex items-start gap-3"><img src="_____ARG_HOST_____/icons/circle.svg" class="mt-2" alt="...">
+            <div class="flex flex-col">
+                <p class="text-justify text-[#172B30]">What is Lorem Ipsum?</p>
+                <p class="text-justify text-[#172B30]"> Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                    unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
+                    not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                    unchanged. It was popularised in the 1960s with the release of with the release of and scrambled it
+                    to make a type specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                    release of with the release of </p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script type="module">
+    import { createApp, ref } from "_____ARG_HOST_____/assets/vue.esm-browser.js";
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
+    const app = createApp({
+      setup() {
+        const data = ref(_____ARG_DATA_____)
+        return { data };
+      },
+    })
+    // ------------------------------------------------------------
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

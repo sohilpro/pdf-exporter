@@ -1,0 +1,26 @@
+POST http://IP:5000/download
+
+{
+    "data": [
+      {
+        name: "1",
+        last_name: "11",
+        gender: "111",
+        birth_date: "1111",
+        number_passport: "11111",
+        national: "111111",
+        deprecate_passport: "1111111",
+        country: "11111111",
+      },
+      {
+        name: "2",
+        last_name: "22",
+        gender: "222",
+        birth_date: "2222",
+        number_passport: "22222",
+        national: "222222",
+        deprecate_passport: "2222222",
+        country: "22222222",
+      }
+    ]
+}

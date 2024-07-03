@@ -1,0 +1,27 @@
+{
+  "name": "pdf_exporter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "minio": "^7.1.3",
+    "puppeteer": "^22.6.5",
+    "uuid": "^9.0.1"
+  },
+  "engines": {
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.22.19",
+    "node": ">= 20.9.0"
+  },
+  "devDependencies": {}
+}
