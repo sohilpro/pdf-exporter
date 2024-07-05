@@ -1,8 +1,11 @@
 import fs from "fs";
+import { resolve } from "path";
 import puppeteer from "puppeteer";
 import { startExpress } from "./includes/expressManager.js";
 import { injectDataToTemplate } from "./includes/functions.js";
 import { renderHtmlToPdf } from "./includes/pdfManager.js";
+
+const __dirname = resolve();
 
 const app = startExpress();
 let browser = await puppeteer.launch({
@@ -51,7 +54,7 @@ app.post("/download", async (req, res) => {
       res.end("Timeout");
       return false;
     } // handle timeout
-    res.end(pdfBytes);
+    res.end(pdfBytes.toString("base64"));
   } catch (error) {
     res.end("Fatal Error" + error.toString());
   }
@@ -70,19 +73,19 @@ app.post("/test", async (req, res) => {
       res.end("Timeout");
       return false;
     } // handle timeout
-    fs.writeFileSync("test.pdf", pdfBytes); // save pdf to local
+    fs.writeFileSync(__dirname + "/public/test.pdf", pdfBytes); // save pdf to local
     res.end();
   } catch (error) {
     res.end("Fatal Error" + error.toString());
   }
 });
 // ---------------------------------------------------------------------------------------------
-
 // check for browser disconnect / crash
 browser.on("disconnected", async () => {
   await browser.close();
   await puppeteer.launch({
-    executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    executablePath:
+      "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
     // executablePath: "/usr/bin/google-chrome",
     args: ["--no-sandbox"],
     headless: true,

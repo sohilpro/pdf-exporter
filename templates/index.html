@@ -48,16 +48,16 @@
                 <div class="flex text-xs flex-col">
                     <p class="font-extrabold text-[#172B30]"> Mashhad <span
                             class="text-[#172B30]/70 font-normal">(hasheminejad Airport)</span></p><span
-                        class="text-[#172B30]/70 text-[10px]">09:18 PM 13 September</span>
-                </div><span class="text-[#172B30] text-xs"> Stop Time: 5h 34m. </span>
+                        class="text-[#172B30]/70 text-[10px]">{{row.flight_time}}</span>
+                </div><span class="text-[#172B30] text-xs"> Stop Time: {{row.stop_time}} </span>
             </div>
         </div>
         <div class="grid grid-cols-3">
             <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Time </span>
-                <p class="font-extrabold text-[#172B30] text-xs">09:18 PM</p>
+                <p class="font-extrabold text-[#172B30] text-xs">{{row.time}}</p>
             </div>
             <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Date </span>
-                <p class="font-extrabold text-[#172B30] text-xs"> 13 September 2022 </p>
+                <p class="font-extrabold text-[#172B30] text-xs"> {{row.date}} </p>
             </div>
             <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Ticket number </span>
                 <p class="font-extrabold text-[#172B30] text-xs">13256RA</p>
@@ -66,10 +66,10 @@
                 <p class="font-extrabold text-[#172B30] text-xs">Economic</p>
             </div>
             <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Baggage </span>
-                <p class="font-extrabold text-[#172B30] text-xs">50 KG free</p>
+                <p class="font-extrabold text-[#172B30] text-xs">{{row.baggage}} KG free</p>
             </div>
             <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Flight number </span>
-                <p class="font-extrabold text-[#172B30] text-xs">65232211456</p>
+                <p class="font-extrabold text-[#172B30] text-xs">{{row.flight_number}}</p>
             </div>
         </div>
         <div class="flex items-center gap-10">
@@ -78,11 +78,11 @@
                         class="font-extrabold text-sm">Iran Air</span></div>
             </div>
             <div class="flex flex-col"><span class="text-[#172B30]/70 text-[10px]">Issue Time</span><span
-                    class="font-extrabold text-sm">07:15 PM , 9 September 2022</span></div>
+                    class="font-extrabold text-sm">{{row.issue_time}}</span></div>
         </div>
         <div class="grid border-b-2 pb-4 grid-cols-3">
             <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Price </span>
-                <p class="font-extrabold text-[#172B30] text-xs"> 12.000.000.000 Rial </p>
+                <p class="font-extrabold text-[#172B30] text-xs"> {{row.price}} USD </p>
             </div>
             <div class="flex flex-col gap-1"><span class="text-[#172B30]/70 text-[10px]"> Payment </span>
                 <p class="font-extrabold text-[#172B30] text-xs">Online Payment</p>
